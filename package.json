@@ -1,0 +1,30 @@
+{
+  "name": "enjoy-immutable",
+  "version": "15.11.1-preview.1511201842",
+  "description": "Adds Immutable.js collections to ENJOY.js.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iiyo/enjoy-immutable.git"
+  },
+  "keywords": [
+    "persistent",
+    "datastructures",
+    "collections",
+    "enjoy.js",
+    "functional"
+  ],
+  "author": "J. Steinbeck <mail@steinbeck.it> (https://steinbeck.it)",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/iiyo/enjoy-immutable/issues"
+  },
+  "homepage": "https://github.com/iiyo/enjoy-immutable#readme",
+  "dependencies": {
+    "enjoy-js": "^15.11.1-preview.1511202107",
+    "immutable": "^3.7.5"
+  }
+}
