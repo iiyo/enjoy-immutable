@@ -1,4 +1,4 @@
-/* global require, enjoy, using, Immutable */
+/* global require, enjoy, using, Immutable, window */
 
 (function () {
     
@@ -64,13 +64,15 @@
     }
     
     if (typeof using === "function") {
-        using("enjoy").define(enjoyImmutable, Immutable);
+        using("enjoy").define("enjoy-immutable", function (enjoy) {
+            return enjoyImmutable(enjoy, Immutable);
+        });
     }
     else if (typeof require === "function" && typeof module !== "undefined") {
         module.exports = enjoyImmutable(require("enjoy-js"), require("immutable"));
     }
     else if (typeof enjoy === "object") {
-        enjoyImmutable(enjoy, Immutable);
+        window.enjoyImmutable = enjoyImmutable(enjoy, Immutable);
     }
     else {
         throw new Error("ENJOY.js not found.");
